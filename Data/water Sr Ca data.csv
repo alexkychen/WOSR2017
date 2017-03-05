@@ -1,0 +1,272 @@
+year,date,location,site,Ca (ppm),Sr (ppb),Sr:Ca
+2013,26-Mar,Detroit River 68,Detroit River,30.09,127.66,4.242605517
+2013,2-Apr,Detroit River 68,Detroit River,28.4,120.74,4.251408451
+2013,8-Apr,Detroit River 68,Detroit River,28.55,125.42,4.392994746
+2013,17-Apr,Detroit River 68,Detroit River,28.41,130.38,4.589229145
+2013,30-Apr,Detroit River 68,Detroit River,31.7,142.72,4.502208202
+2013,6-May,Detroit River 68,Detroit River,28.13,130.66,4.644863135
+2013,13-May,Detroit River 68,Detroit River,26.92,116.9,4.342496285
+2013,20-May,Detroit River 68,Detroit River,28.88,123.92,4.290858726
+2013,28-May,Detroit River 68,Detroit River,28.12,119.46,4.248221906
+2013,3-Jun,Detroit River 68,Detroit River,26.29,109.62,4.169646253
+2013,12-Jun,Detroit River 68,Detroit River,26.77,122.2,4.564811356
+2013,26-Mar,Maumee River up,Maumee River,74.87,772.6,10.31921998
+2013,26-Mar,Maumee River low,Maumee River,68.96,569.2,8.254060325
+2013,1-Apr,Maumee River up,Maumee River,78.79,992.4,12.59550704
+2013,1-Apr,Maumee River low,Maumee River,79.77,859.2,10.77096653
+2013,17-Apr,Maumee River up,Maumee River,44.66,349,7.814599194
+2013,17-Apr,Maumee River low,Maumee River,44.49,366.8,8.244549337
+2013,24-Apr,Maumee River up,Maumee River,47.44,325.6,6.863406408
+2013,24-Apr,Maumee River low,Maumee River,44.8,279,6.227678571
+2013,1-May,Maumee River up,Maumee River,59.63,441.6,7.405668288
+2013,1-May,Maumee River low,Maumee River,58.44,414.6,7.094455852
+2013,10-May,Maumee River up,Maumee River,61.33,591.2,9.639654329
+2013,10-May,Maumee River low,Maumee River,64.51,598,9.269880639
+2013,16-May,Maumee River up,Maumee River,57.31,649.4,11.33135578
+2013,16-May,Maumee River low,Maumee River,58.38,565.4,9.68482357
+2013,20-May,Maumee River up,Maumee River,60.53,738.6,12.20221378
+2013,20-May,Maumee River low,Maumee River,56.27,600.6,10.6735383
+2013,30-May,Maumee River mouth,Maumee River,57.93,696.4,12.02140514
+2013,15-Apr,Sandusky River,Sandusky River,34.81,422.2,12.12869865
+2013,23-Apr,Sandusky River,Sandusky River,60.23,1046.8,17.38004317
+2013,29-Apr,Sandusky River,Sandusky River,55.98,962.6,17.19542694
+2013,1-May,Sandusky River,Sandusky River,63.8,1144,17.93103448
+2013,7-May,Sandusky River,Sandusky River,69.21,1373,19.83817367
+2013,10-May,Sandusky River,Sandusky River,73.16,1656,22.63531985
+2013,13-May,Sandusky River,Sandusky River,75.61,2038,26.9541066
+2013,16-May,Sandusky River,Sandusky River,78.57,2320,29.5278096
+2013,23-May,Sandusky River,Sandusky River,77.18,2430,31.48484063
+2013,28-Mar,Lake Erie R02,Ohio reefs,30.92,121.52,3.930142303
+2013,28-Mar,Lake Erie R05,Ohio reefs,31.18,162.58,5.214239897
+2013,28-Mar,Lake Erie R24,Ohio reefs,37.57,226,6.015437849
+2013,3-Apr,Lake Erie R02,Ohio reefs,32.61,172.98,5.30450782
+2013,3-Apr,Lake Erie R05,Ohio reefs,29.89,160.74,5.3777183
+2013,3-Apr,Lake Erie R24,Ohio reefs,29.47,125.18,4.247709535
+2013,10-Apr,Lake Erie R02,Ohio reefs,33.75,178.86,5.299555556
+2013,10-Apr,Lake Erie R05,Ohio reefs,34.94,199.94,5.722381225
+2013,10-Apr,Lake Erie R20,Ohio reefs,32.81,183.82,5.602560195
+2013,14-Apr,Lake Erie R02,Ohio reefs,32.69,166.54,5.094524319
+2013,14-Apr,Lake Erie R05,Ohio reefs,36.65,234.2,6.390177353
+2013,14-Apr,Lake Erie R24,Ohio reefs,29.96,152.72,5.097463284
+2013,23-Apr,Lake Erie R02,Ohio reefs,30.06,139.26,4.632734531
+2013,23-Apr,Lake Erie R05,Ohio reefs,35.9,267.6,7.454038997
+2013,23-Apr,Lake Erie R23,Ohio reefs,35.21,229.8,6.526554956
+2013,15-Apr,Lake Erie A,western lake,39.95,312.8,7.829787234
+2013,16-Apr,Lake Erie B,western lake,36.37,220.2,6.054440473
+2013,16-Apr,Lake Erie C,western lake,41.66,328.2,7.87806049
+2013,16-Apr,Lake Erie D,western lake,33.15,197.1,5.945701357
+2013,16-Apr,Lake Erie E,western lake,38.29,307.4,8.028205798
+2013,16-Apr,Lake Erie H,western lake,30.94,149.3,4.825468649
+2013,16-Apr,Lake Erie I,western lake,41.15,397,9.64763062
+2013,22-Apr,Lake Erie A,western lake,51.72,438.2,8.47254447
+2013,22-Apr,Lake Erie B,western lake,46.04,337,7.319721981
+2013,22-Apr,Lake Erie C,western lake,46.35,384.2,8.289104639
+2013,22-Apr,Lake Erie D,western lake,45.2,401.8,8.889380531
+2013,22-Apr,Lake Erie E,western lake,38.69,310.6,8.02791419
+2013,22-Apr,Lake Erie H,western lake,32.15,171.92,5.347433904
+2013,22-Apr,Lake Erie I,western lake,30.77,173.92,5.652258694
+2013,30-Apr,Lake Erie R02,Ohio reefs,33.38,202.2,6.057519473
+2013,30-Apr,Lake Erie R05,Ohio reefs,34.17,224.2,6.561311092
+2013,30-Apr,Lake Erie R23,Ohio reefs,31.19,168.82,5.412632254
+2013,29-Apr,Lake Erie A,western lake,47.1,323.8,6.874734607
+2013,29-Apr,Lake Erie B,western lake,49.86,340.4,6.827115925
+2013,29-Apr,Lake Erie C,western lake,47.42,399.2,8.418388865
+2013,29-Apr,Lake Erie D,western lake,42.69,374.4,8.770203795
+2013,29-Apr,Lake Erie E,western lake,43.64,325,7.447296059
+2013,29-Apr,Lake Erie I,western lake,35.79,357,9.974853311
+2013,29-Apr,Lake Erie S,western lake,31.97,188.62,5.899906162
+2013,26-Apr,Lake Erie T,western lake,36.1,213.6,5.916897507
+2013,29-Apr,Lake Erie H,western lake,31.39,181.8,5.791653393
+2013,26-Apr,Lake Erie R,western lake,35.32,217.4,6.155152888
+2013,26-Apr,Lake Erie U,western lake,33.82,201.4,5.95505618
+2013,2-May,Lake Erie T,western lake,43.99,511.2,11.62082291
+2013,2-May,Lake Erie R,western lake,30.93,161.42,5.218881345
+2013,2-May,Lake Erie U,western lake,34.46,237.4,6.889146837
+2013,7-May,Lake Erie A,western lake,32.6,232,7.116564417
+2013,7-May,Lake Erie B,western lake,45.04,341.2,7.575488455
+2013,7-May,Lake Erie C,western lake,42.12,320.2,7.602089269
+2013,7-May,Lake Erie D,western lake,34.02,248.2,7.295708407
+2013,7-May,Lake Erie E,western lake,50.48,358.6,7.103803487
+2013,7-May,Lake Erie H,western lake,36.09,291.6,8.079800499
+2013,8-May,Lake Erie I,western lake,34.33,254,7.39877658
+2013,9-May,Lake Erie R,western lake,33.81,211.2,6.246672582
+2013,9-May,Lake Erie T,western lake,33.09,208.8,6.310063463
+2013,9-May,Lake Erie U,western lake,33.82,210.8,6.232998226
+2013,8-May,Lake Erie R02,Ohio reefs,35.01,245.4,7.009425878
+2013,8-May,Lake Erie R05,Ohio reefs,32.05,169.38,5.284867395
+2013,8-May,Lake Erie R23,Ohio reefs,31.04,154.14,4.965850515
+2013,16-May,Lake Erie A,western lake,47.36,418.4,8.834459459
+2013,16-May,Lake Erie B,western lake,38.48,248.2,6.45010395
+2013,16-May,Lake Erie C,western lake,43.45,322,7.410817031
+2013,16-May,Lake Erie D,western lake,44.09,326.2,7.398503062
+2013,16-May,Lake Erie E,western lake,33.83,166.18,4.912208099
+2013,16-May,Lake Erie H,western lake,41.92,320.6,7.647900763
+2013,16-May,Lake Erie I,western lake,43.28,368.4,8.512014787
+2013,16-May,Lake Erie R,western lake,36.62,263.2,7.187329328
+2013,16-May,Lake Erie U,western lake,32.03,194.84,6.083047143
+2013,16-May,Lake Erie T,western lake,32.37,223.8,6.913809082
+2013,16-May,Lake Erie S,western lake,35.52,304.8,8.581081081
+2013,21-May,Lake Erie A,western lake,43.08,351.6,8.161559889
+2013,21-May,Lake Erie B,western lake,43.4,346.2,7.976958525
+2013,21-May,Lake Erie C,western lake,38.87,297.6,7.656290198
+2013,21-May,Lake Erie D,western lake,39.16,307.8,7.860061287
+2013,21-May,Lake Erie E,western lake,39.55,266.4,6.735777497
+2013,21-May,Lake Erie I,western lake,36.32,274.4,7.555066079
+2013,21-May,Lake Erie S,western lake,33.04,224.8,6.803874092
+2013,20-May,Lake Erie U,western lake,34.65,227.6,6.568542569
+2013,20-May,Lake Erie T,western lake,31.72,209.2,6.595208071
+2013,20-May,Lake Erie R,western lake,36.72,242.2,6.595860566
+2013,21-May,Lake Erie H,western lake,38.3,292,7.624020888
+2013,29-May,Lake Erie A,western lake,43.13,430.4,9.979132854
+2013,29-May,Lake Erie B,western lake,35.26,237.2,6.727169597
+2013,29-May,Lake Erie C,western lake,39.35,349.2,8.874205845
+2013,29-May,Lake Erie D,western lake,35.96,253.2,7.041156841
+2013,29-May,Lake Erie E,western lake,36.41,240,6.591595715
+2013,29-May,Lake Erie H,western lake,35.26,236.8,6.715825298
+2013,29-May,Lake Erie I,western lake,32.7,205,6.26911315
+2013,29-May,Lake Erie R,western lake,33.35,210.2,6.302848576
+2013,29-May,Lake Erie S,western lake,38.45,371.4,9.659297789
+2013,30-May,Lake Erie T,western lake,35.77,246,6.877271457
+2013,30-May,Lake Erie U,western lake,33.48,221.6,6.618876941
+2012,24-Apr,Detroit River 68,Detroit River,28.827,104,3.608
+2012,3-May,Detroit River 68,Detroit River,30.917,107.5,3.477
+2012,10-Apr,Detroit River 68,Detroit River,31.28,104,3.325
+2012,8-May,Detroit River 68,Detroit River,31.717,131,4.13
+2012,2-Apr,Detroit River 68,Detroit River,31.453,108.5,3.45
+2012,17-Apr,Detroit River 68,Detroit River,35.887,122,3.4
+2012,29-Mar,Lake Erie A,western lake,66.21,591,8.926
+2012,3-Apr,Lake Erie A,western lake,60.703,594,9.785
+2012,17-Apr,Lake Erie A,western lake,45.13,329.5,7.301
+2012,12-Apr,Lake Erie A,western lake,54.18,501.5,9.256
+2012,3-Apr,Lake Erie B,western lake,65.057,549,8.439
+2012,28-Mar,Lake Erie B,western lake,52.62,380,7.222
+2012,17-Apr,Lake Erie B,western lake,33.775,152,4.5
+2012,12-Apr,Lake Erie B,western lake,37.865,196,5.176
+2012,3-Apr,Lake Erie C,western lake,43.17,257,5.953
+2012,28-Mar,Lake Erie C,western lake,48.607,341.5,7.026
+2012,12-Apr,Lake Erie C,western lake,37.85,190,5.02
+2012,17-Apr,Lake Erie C,western lake,53.095,464,8.739
+2012,28-Mar,Lake Erie D,western lake,51.427,431,8.381
+2012,3-Apr,Lake Erie D,western lake,51.71,407.5,7.88
+2012,17-Apr,Lake Erie D,western lake,51.785,412.5,7.966
+2012,12-Apr,Lake Erie D,western lake,41.87,242.5,5.792
+2012,28-Mar,Lake Erie E,western lake,29.657,110,3.709
+2012,3-Apr,Lake Erie E,western lake,56.107,456.5,8.136
+2012,26-Apr,Lake Erie E,western lake,31.81,133.5,4.197
+2012,12-Apr,Lake Erie E,western lake,32.485,135,4.156
+2012,3-Apr,Lake Erie H,western lake,39.86,252,6.322
+2012,28-Mar,Lake Erie H,western lake,45.567,322,7.067
+2012,12-Apr,Lake Erie H,western lake,48.77,385,7.894
+2012,17-Apr,Lake Erie H,western lake,49.635,351.5,7.082
+2012,3-Apr,Lake Erie I,western lake,42.033,239,5.686
+2012,28-Mar,Lake Erie I,western lake,41.12,239,5.812
+2012,12-Apr,Lake Erie I,western lake,53.975,456.5,8.458
+2012,17-Apr,Lake Erie I,western lake,52.2,435.5,8.343
+2012,3-Apr,Lake Erie R,western lake,36.297,178,4.904
+2012,25-Apr,Lake Erie R,western lake,41.47,260,6.27
+2012,12-Apr,Lake Erie R,western lake,39.61,232.5,5.87
+2012,19-Apr,Lake Erie R,western lake,38.2,217.5,5.694
+2012,27-Mar,Lake Erie R02,Ohio reefs,41.115,254.5,6.19
+2012,20-Mar,Lake Erie R02,Ohio reefs,31.68,124.5,3.93
+2012,13-Apr,Lake Erie R03,Ohio reefs,39.835,240,6.025
+2012,4-Apr,Lake Erie R03,Ohio reefs,36.255,171,4.717
+2012,12-Apr,Lake Erie R05,Ohio reefs,40.64,282,6.939
+2012,20-Mar,Lake Erie R05,Ohio reefs,34.905,153,4.383
+2012,4-Apr,Lake Erie R05,Ohio reefs,35.605,172.5,4.845
+2012,27-Mar,Lake Erie R05,Ohio reefs,33.085,141,4.262
+2012,27-Mar,Lake Erie R24,Ohio reefs,38.565,238,6.171
+2012,25-Apr,Lake Erie R24,Ohio reefs,31.755,132.5,4.173
+2012,15-Mar,Lake Erie R24,Ohio reefs,30.08,101.5,3.374
+2012,11-Apr,Lake Erie R24,Ohio reefs,43.295,295,6.814
+2012,3-Apr,Lake Erie S,western lake,39.837,273.5,6.866
+2012,26-Apr,Lake Erie S,western lake,49.46,408,8.249
+2012,17-Apr,Lake Erie S,western lake,40.585,289,7.121
+2012,3-Apr,Lake Erie T,western lake,36.53,213,5.831
+2012,19-Apr,Lake Erie T,western lake,36.915,203,5.499
+2012,25-Apr,Lake Erie T,western lake,48.08,379.5,7.893
+2012,12-Apr,Lake Erie T,western lake,46.245,342.5,7.406
+2012,3-Apr,Lake Erie U,western lake,35.767,165,4.613
+2012,19-Apr,Lake Erie U,western lake,38.18,266.5,6.98
+2012,25-Apr,Lake Erie U,western lake,36.625,232,6.334
+2012,12-Apr,Lake Erie U,western lake,37.43,224,5.985
+2012,26-Apr,Maumee River D,Maumee River,54.853,636,11.595
+2012,11-Apr,Maumee River D,Maumee River,68.067,511.5,7.515
+2012,4-Apr,Maumee River D,Maumee River,62.157,419,6.741
+2012,19-Apr,Maumee River D,Maumee River,64.84,581,8.961
+2012,17-Apr,Maumee River U,Maumee River,59.827,699,11.684
+2012,26-Apr,Maumee River U,Maumee River,57.81,714.5,12.359
+2012,11-Apr,Maumee River U,Maumee River,58.17,646,11.105
+2012,4-Apr,Maumee River U,Maumee River,71.333,476,6.673
+2012,4-Apr,Sandusky River,Sandusky River,85.753,1908.5,22.256
+2012,9-Apr,Sandusky River,Sandusky River,89.22,2212,24.793
+2012,3-May,Sandusky River,Sandusky River,86.243,3095,35.887
+2012,13-Apr,Sandusky River,Sandusky River,89.263,2262,25.341
+2011,4-May,Lake Erie A,western lake,31.149412,234.469,7.52723679
+2011,11-May,Lake Erie A,western lake,48.23963422,390.240535,8.089624669
+2011,19-May,Lake Erie A,western lake,49.23311977,480.8009344,9.765802708
+2011,4-May,Lake Erie B,western lake,34.244047,301.103,8.792856756
+2011,11-May,Lake Erie B,western lake,45.13236297,325.0017894,7.201080732
+2011,19-May,Lake Erie B,western lake,44.98488472,316.024901,7.025135286
+2011,4-May,Lake Erie D,western lake,30.680429,321.433,10.47680917
+2011,11-May,Lake Erie D,western lake,38.49156263,251.6947836,6.538959877
+2011,19-May,Lake Erie D,western lake,43.45330734,360.5476303,8.297357608
+2011,4-May,Lake Erie E,western lake,37.97480599,212.7124196,5.601408989
+2011,11-May,Lake Erie E,western lake,36.09910748,178.0530846,4.932340356
+2011,19-May,Lake Erie E,western lake,31.21856612,131.9658864,4.227160398
+2011,4-May,Lake Erie F,western lake,24.194892,192.506,7.956472796
+2011,11-May,Lake Erie F,western lake,28.09327638,98.93865726,3.521791333
+2011,19-May,Lake Erie F,western lake,30.84987185,104.5559646,3.38918635
+2011,4-May,Lake Erie I,western lake,24.602032,217.718,8.849594212
+2011,11-May,Lake Erie I,western lake,38.78442333,294.9072845,7.603755817
+2011,19-May,Lake Erie I,western lake,40.51737631,293.1115389,7.234218145
+2011,4-May,Lake Erie L,western lake,40.24891376,281.8228804,7.001999658
+2011,11-May,Lake Erie L,western lake,40.965661,302.2865554,7.379023016
+2011,19-May,Lake Erie L,western lake,36.69192114,203.4967065,5.546090261
+2011,4-May,Lake Erie N,western lake,22.346312,136.525,6.109509256
+2011,10-May,Lake Erie N,western lake,31.8521231,127.114257,3.990762456
+2011,4-May,Lake Erie O,western lake,37.11729617,228.470377,6.155361532
+2011,10-May,Lake Erie O,western lake,42.22475607,310.403419,7.351218761
+2011,19-May,Lake Erie O,western lake,39.32366013,294.155694,7.480374233
+2011,4-May,Lake Erie Q,western lake,2.4904817,229.102,91.99103932
+2011,10-May,Lake Erie Q,western lake,37.97755614,239.7355696,6.312559153
+2011,19-May,Lake Erie Q,western lake,40.51282416,278.5083923,6.87457362
+2011,26-Apr,Lake Erie R2,Ohio reefs,41.48656198,245.6332804,5.920791424
+2011,3-May,Lake Erie R2,Ohio reefs,28.29508,307.833,10.87938256
+2011,26-Apr,Lake Erie R24,Ohio reefs,33.01914315,195.6336293,5.924854814
+2011,3-May,Lake Erie R24,Ohio reefs,30.603234,231.382,7.560704205
+2011,10-May,Lake Erie R24,Ohio reefs,38.39881778,261.52945,6.810872447
+2011,10-May,Lake Erie R3,Ohio reefs,39.48089869,276.0372389,6.99166554
+2011,26-Apr,Lake Erie R5,Ohio reefs,36.72747197,274.7626845,7.481121617
+2011,3-May,Lake Erie R5,Ohio reefs,32.94455529,194.0471855,5.890113975
+2011,10-May,Lake Erie R5,Ohio reefs,37.23140859,235.5686995,6.327149802
+2011,4-May,Lake Erie T,western lake,2.4307472,252.878,104.0330315
+2011,10-May,Lake Erie T,western lake,35.54669959,231.7583068,6.519826297
+2011,19-May,Lake Erie T,western lake,37.0605836,297.2574763,8.020852544
+2011,19-May,Lake Erie X,western lake,38.02166889,274.7060008,7.224985351
+2011,2-May,Maumee Rv Downstream,Maumee River,31.029326,300.284,9.6774258
+2011,12-May,Maumee Rv Downstream,Maumee River,53.96198575,437.6006314,8.109424168
+2011,19-May,Maumee Rv Downstream,Maumee River,44.43287547,332.5213476,7.483678337
+2011,2-May,Maumee Rv Midstream,Maumee River,35.079204,316.337,9.017792992
+2011,12-May,Maumee Rv Midstream,Maumee River,56.95569007,454.803456,7.985215445
+2011,19-May,Maumee Rv Midstream,Maumee River,43.42524652,319.0894616,7.348017276
+2011,2-May,Sandusky Rv Downstream ,Sandusky River,43.136864,806.437,18.69484532
+2011,10-May,Sandusky Rv Downstream ,Sandusky River,47.52250395,735.9067853,15.48543793
+2011,19-May,Sandusky Rv Downstream ,Sandusky River,46.053551,695.7626816,15.10768804
+2011,2-May,Sandusky Rv Midstream ,Sandusky River,42.946999,863.061,20.09595595
+2011,10-May,Sandusky Rv Midstream ,Sandusky River,54.91691199,899.5977391,16.38106926
+2011,19-May,Sandusky Rv Midstream ,Sandusky River,45.92602943,671.5834404,14.62315486
+2001,,MB,Maumee River,71.52,785,10.97595078
+2001,,MB,Maumee River,73.25,789.7,10.78088737
+2001,,MB,Maumee River,70.54,767.8,10.88460448
+2001,,MB,Maumee River,70.51,759.1,10.76584882
+2001,,MB,Maumee River,68.85,720.6,10.46623094
+2001,,MB,Maumee River,70.92,727.4,10.25662719
+2001,,SB,Sandusky River,61.22,1401,22.88467821
+2001,,SB,Sandusky River,61.34,1400,22.82360613
+2001,,SB,Sandusky River,61.95,1401,22.61501211
+2001,,SB,Sandusky River,61.68,1394,22.60051881
+1995,15-Mar,,Maumee River,62,470,7.58065
+1994,30-Mar,,Maumee River,81,690,8.5185
+1994,29-Mar,,Sandusky River,79,1600,20.2532
+1993,11-Mar,,Maumee River,36,230,6.38889
+1993,11-Mar,,Sandusky River,42,430,10.2381

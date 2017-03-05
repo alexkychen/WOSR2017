@@ -2,7 +2,42 @@
 #MS: Corey et al. Otolith microchemistry as a stock discrimination tool for river-spawning populations of Walleye (Sander vitreus) in Lake Erie.
 
 #ANOVA for water chemistry
-df_water <- read.csv("Data/")
+df_water <- read.csv("Data/water Sr Ca data.csv", header = T);summary(df_water);names(df_water)
+df_water <- df_water[,c("year","site","Ca..ppm.","Sr..ppb.","Sr.Ca")];summary(df_water)
+df_water1 <- subset(df_water, site=="Maumee River");summary(df_water1)
+df_water2 <- subset(df_water, site=="Sandusky River");summary(df_water2)
+df_water3 <- rbind(df_water1, df_water2);summary(df_water3)
+df_water3$site <- factor(df_water3$site);summary(df_water3)
+df_water3$year <- factor(df_water3$year);summary(df_water3)
+#Run summarySE
+dfn_water <- summarySE(df_water3, measurevar = "Sr.Ca", groupvars = c("year","site"));dfn_water
+tdf <- data.frame("1995","Sandusky River",NA,NA,NA,NA,NA)
+names(tdf) <- names(dfn_water)
+dfn_water1 <- rbind(dfn_water[1:5,], tdf, dfn_water[6:13,]) 
+write.csv(dfn_water1, "Data/water_summarySE.csv", row.names=F, quote = F )
+
+#Make water Sr:Ca bar plot w/ SD
+dfn_water <- read.csv("Data/water_summarySE.csv", header = T);head(dfn_water)
+dfn_water$year <- factor(dfn_water$year);summary(dfn_water);str(dfn_water)
+
+library(ggplot2)
+ggplot(dfn_water, aes(x=year, y=Sr.Ca, fill=site, width=0.85))+
+  geom_bar(stat="identity", position="dodge", colour="black")+
+  geom_errorbar(aes(ymin=Sr.Ca-sd, ymax=Sr.Ca+sd),width=.3, position=position_dodge(0.9))+
+  xlab("Year")+ylab("Mean water Sr:Ca (ppb:ppm) ± SD")+
+  scale_fill_manual(values = c("white","grey"))+
+  theme_bw()+
+  theme(panel.grid.major = element_blank(), panel.grid.minor=element_blank(),
+        axis.title.x=element_text(size=16, colour = "black", margin = unit(c(5, 0, 0, 0), "mm")),
+        axis.title.y=element_text(size=16, colour = "black", margin = unit(c(0, 5, 0, 0), "mm")),
+        axis.text=element_text(size=14, colour = "black"),legend.title=element_blank(), legend.position="none" )
+
+#Subset water chem data for 2001, 2011, 2012, 2013
+df_water4 <- subset(df_water3, year=="2001"|year=="2011"|year=="2012"|year=="2013");summary(df_water4)
+df_water4$year <- factor(df_water4$year)
+
+anova_w <- aov(Sr.Ca ~ year*site, data=df_water4);summary(anova_w)
+TukeyHSD(anova_w)
 
 #ANOVA for otolith Sr
 df_oto <- read.csv("Data/larval oto chem age.csv", header = T);summary(df_oto)
@@ -81,5 +116,40 @@ ggplot(df_oto2, aes(x=age.d, y=otoSr.ppm, group=location, colour=location, shape
 
 
 
-
+##Help function
+summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,
+                      conf.interval=.95, .drop=TRUE) {
+  library(plyr)
+  
+  # New version of length which can handle NA's: if na.rm==T, don't count them
+  length2 <- function (x, na.rm=FALSE) {
+    if (na.rm) sum(!is.na(x))
+    else       length(x)
+  }
+  
+  # This does the summary. For each group's data frame, return a vector with
+  # N, mean, and sd
+  datac <- ddply(data, groupvars, .drop=.drop,
+                 .fun = function(xx, col) {
+                   c(N    = length2(xx[[col]], na.rm=na.rm),
+                     mean = mean   (xx[[col]], na.rm=na.rm),
+                     sd   = sd     (xx[[col]], na.rm=na.rm)
+                   )
+                 },
+                 measurevar
+  )
+  
+  # Rename the "mean" column    
+  datac <- rename(datac, c("mean" = measurevar))
+  
+  datac$se <- datac$sd / sqrt(datac$N)  # Calculate standard error of the mean
+  
+  # Confidence interval multiplier for standard error
+  # Calculate t-statistic for confidence interval: 
+  # e.g., if conf.interval is .95, use .975 (above/below), and use df=N-1
+  ciMult <- qt(conf.interval/2 + .5, datac$N-1)
+  datac$ci <- datac$se * ciMult
+  
+  return(datac)
+}
 
