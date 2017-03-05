@@ -1,9 +1,10 @@
 ---
 title: "Otolith Sr Data Analysis"
 output:
+  word_document: default
   html_document:
-    theme: united
     highlight: tango
+    theme: united
 ---
 
 ### Read data
@@ -18,7 +19,7 @@ summary(df_oto1)
 
 ```
 
-### ANOVA
+### ANOVA (oto Sr ~ location x year )
 
 ```{r,}
 #Test effects of Location (two rivers), Year, and Location*Year interaction on Otolith Sr 
@@ -34,7 +35,7 @@ summary(anova1)
 TukeyHSD(anova1)
 ```
 
-### Basic Boxplot
+### Basic Boxplot (Oto Sr between two rivers across 7 yrs)
 
 ```{r, fig.align='center', fig.width=9, fig.asp=0.7}
 boxplot(otoSr.ppm ~ year, data=df_oto1, boxfill=rgb(1, 1, 1, alpha=1), border=rgb(1, 1, 1, alpha=1), xlab="Year",ylab="Otolith [Sr](ppm)", cex.lab=1.3)
@@ -43,7 +44,8 @@ boxplot(otoSr.ppm ~ year, data=df_oto1[which(df_oto1$location=="Sandusky"),], xa
 
 ```
 
-### ggplot2 Boxplot
+### ggplot2 Boxplot (Oto Sr between two rivers across 7 yrs)
+
 ```{r,fig.align='center', fig.width=9, fig.asp=0.7}
 library(ggplot2)
 
@@ -63,4 +65,44 @@ ggplot(data=df_oto1, aes(x=year, y=otoSr.ppm, fill=location))+
 
 ```
 
+
+
+### ANCOVA (oto Sr ~ age x location)
+```{r,}
+df_oto2 <- df_oto[,c("year","location","otoSr.ppm","age.d")]
+df_oto2$year <- as.factor(df_oto2$year)
+# Drop data have no age 
+df_oto2 <- na.omit(df_oto2)
+# Drop unused factor (year 2001)
+df_oto2$year <- factor(df_oto2$year);summary(df_oto2)
+
+```
+
+```{r,}
+#ANOVA with interaction between age and river
+mod1 <- aov(otoSr.ppm ~ age.d*location, data=df_oto2);summary(mod1)
+
+#ANOVA without interaction between age and river
+mod2 <- aov(otoSr.ppm ~ age.d + location, data=df_oto2);summary(mod2)
+
+#ANOVA of two models
+anova(mod1,mod2)
+```
+
+
+### Two linear regressions
+```{r, fig.align='center', fig.width=9, fig.asp=0.5}
+library(ggplot2)
+
+ggplot(df_oto2, aes(x=age.d, y=otoSr.ppm, group=location, colour=location, shape=year))+
+  geom_point(size=2)+
+  geom_smooth(method = lm, se=F, fullrange=T)+
+  xlab("Age (d)")+ylab("Otolith [Sr](ppm)")+
+  scale_y_continuous(breaks=seq(0, 2500, 500))+scale_x_continuous(breaks=seq(0, 24, 2))+
+  theme_bw()+
+  theme(panel.grid.major = element_blank(), panel.grid.minor=element_blank(),
+        axis.title.x=element_text(size=16, colour = "black", margin = unit(c(5, 0, 0, 0), "mm")),
+        axis.title.y=element_text(size=16, colour = "black", margin = unit(c(0, 5, 0, 0), "mm")),
+        axis.text=element_text(size=14, colour = "black"),legend.title=element_blank() )
+```
 

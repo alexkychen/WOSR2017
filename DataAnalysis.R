@@ -48,3 +48,38 @@ ggplot(data=df_oto1, aes(x=year, y=otoSr.ppm, fill=location))+
   annotate("text",x=1:7-0.2, y=c(1600,1200,1200,1600,1200,1500,1400), label=c("a","a","a","a","a","a","a"), size=6)+
   annotate("text",x=1:7+0.2, y=c(2000,3200,2400,3200,1500,2900,2800), label=c("b","bc","bd","cd","ae","cd","bce"), size=6)
 
+## ANOVA of regressions of otolith Sr and age between two rivers
+df_oto2 <- df_oto[,c("year","location","otoSr.ppm","age.d")];summary(df_oto2);head(df_oto2)
+df_oto2$year <- as.factor(df_oto2$year);summary(df_oto2)
+# Drop data have no age 
+df_oto2 <- na.omit(df_oto2);summary(df_oto2)
+# Drop unused factor (year 2001)
+df_oto2$year <- factor(df_oto2$year);summary(df_oto2)
+
+#ANOVA with interaction between age and river
+mod1 <- aov(otoSr.ppm ~ age.d*location, data=df_oto2);summary(mod1)
+
+#ANOVA without interaction between age and river
+mod2 <- aov(otoSr.ppm ~ age.d + location, data=df_oto2);summary(mod2)
+
+#ANOVA of two models
+anova(mod1,mod2)
+
+#Regression plot
+library(ggplot2)
+
+ggplot(df_oto2, aes(x=age.d, y=otoSr.ppm, group=location, colour=location, shape=year))+
+  geom_point(size=2)+
+  geom_smooth(method = lm, se=F, fullrange=T)+
+  xlab("Age (d)")+ylab("Otolith [Sr](ppm)")+
+  scale_y_continuous(breaks=seq(0, 2500, 500))+scale_x_continuous(breaks=seq(0, 24, 2))+
+  theme_bw()+
+  theme(panel.grid.major = element_blank(), panel.grid.minor=element_blank(),
+        axis.title.x=element_text(size=16, colour = "black", margin = unit(c(5, 0, 0, 0), "mm")),
+        axis.title.y=element_text(size=16, colour = "black", margin = unit(c(0, 5, 0, 0), "mm")),
+        axis.text=element_text(size=14, colour = "black"),legend.title=element_blank() )
+
+
+
+
+
