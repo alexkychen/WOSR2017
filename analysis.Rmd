@@ -1,5 +1,5 @@
 ---
-title: "Otolith Sr Data Analysis"
+title: "Water Sr:Ca & Otolith Sr Data Analysis"
 output:
   word_document: default
   html_document:
@@ -7,9 +7,56 @@ output:
     theme: united
 ---
 
-### Read data
+## Water Chemistry
 
-```{r,}
+### Water Sr:Ca between two rivers across 7 yrs
+```{r, echo=FALSE, warning=FALSE}
+dfn_water <- read.csv("Data/water_summarySE.csv", header = T)
+dfn_water$year <- factor(dfn_water$year)
+
+library(ggplot2)
+ggplot(dfn_water, aes(x=year, y=Sr.Ca, fill=site, width=0.85))+
+  geom_bar(stat="identity", position="dodge", colour="black")+
+  geom_errorbar(aes(ymin=Sr.Ca-sd, ymax=Sr.Ca+sd),width=.3, position=position_dodge(0.9))+
+  xlab("Year")+ylab("Mean water Sr:Ca (ppb:ppm) ± SD")+
+  scale_fill_manual(values = c("white","grey"))+
+  theme_bw()+
+  theme(panel.grid.major = element_blank(), panel.grid.minor=element_blank(),
+        axis.title.x=element_text(size=16, colour = "black", margin = unit(c(5, 0, 0, 0), "mm")),
+        axis.title.y=element_text(size=16, colour = "black", margin = unit(c(0, 5, 0, 0), "mm")),
+        axis.text=element_text(size=14, colour = "black"),legend.title=element_blank(), legend.position="none" )
+
+```
+
+- white: Maumee River, gray: Sandusky River
+
+### ANOVA of water Sr:Ca ~ year*site (2001, 2011, 2012, and 2013 data)
+
+```{r, echo=FALSE}
+## Read data
+df_water <- read.csv("Data/water Sr Ca data.csv", header = T)
+df_water <- df_water[,c("year","site","Ca..ppm.","Sr..ppb.","Sr.Ca")]
+df_water1 <- subset(df_water, site=="Maumee River")
+df_water2 <- subset(df_water, site=="Sandusky River")
+df_water3 <- rbind(df_water1, df_water2)
+df_water3$site <- factor(df_water3$site)
+df_water3$year <- factor(df_water3$year)
+df_water4 <- subset(df_water3, year=="2001"|year=="2011"|year=="2012"|year=="2013")
+df_water4$year <- factor(df_water4$year)
+anova_w <- aov(Sr.Ca ~ year*site, data=df_water4)
+summary(anova_w)
+```
+
+### Tukey HSD (water Sr:Ca ~ year*site)
+
+```{r, echo=FALSE }
+TukeyHSD(anova_w)
+```
+
+## Otolith Sr
+
+### Data summary
+```{r, echo=FALSE}
 #Read data and extract variables for analysis
 df_oto <- df_oto <- read.csv("Data/larval oto chem age.csv", header = T)
 df_oto1 <- df_oto[,c("year","location","otoSr.ppm")]
@@ -19,25 +66,24 @@ summary(df_oto1)
 
 ```
 
-### ANOVA (oto Sr ~ location x year )
+### ANOVA of oto Sr ~ year*location(site)
 
-```{r,}
+```{r, echo=FALSE}
 #Test effects of Location (two rivers), Year, and Location*Year interaction on Otolith Sr 
 anova1 <- aov(otoSr.ppm ~ location*year, data=df_oto1)
 summary(anova1)
 
 ```
 
-### Tukey HSD test
+### Tukey HSD test (oto Sr ~ year*site)
 
-```{r, }
+```{r, echo=FALSE }
 #TukeyHSD test
 TukeyHSD(anova1)
 ```
 
 ### Basic Boxplot (Oto Sr between two rivers across 7 yrs)
-
-```{r, fig.align='center', fig.width=9, fig.asp=0.7}
+```{r, echo=FALSE, fig.align='center', fig.width=9, fig.asp=0.7}
 boxplot(otoSr.ppm ~ year, data=df_oto1, boxfill=rgb(1, 1, 1, alpha=1), border=rgb(1, 1, 1, alpha=1), xlab="Year",ylab="Otolith [Sr](ppm)", cex.lab=1.3)
 boxplot(otoSr.ppm ~ year, data=df_oto1[which(df_oto1$location=="Maumee"),], xaxt = "n", add = TRUE, boxfill="white",boxwex=0.3, at=1:7 - 0.15)
 boxplot(otoSr.ppm ~ year, data=df_oto1[which(df_oto1$location=="Sandusky"),], xaxt = "n", add = TRUE, boxfill="grey",boxwex=0.3, at=1:7 + 0.15)
@@ -46,7 +92,7 @@ boxplot(otoSr.ppm ~ year, data=df_oto1[which(df_oto1$location=="Sandusky"),], xa
 
 ### ggplot2 Boxplot (Oto Sr between two rivers across 7 yrs)
 
-```{r,fig.align='center', fig.width=9, fig.asp=0.7}
+```{r, echo=FALSE, fig.align='center', fig.width=9, fig.asp=0.7}
 library(ggplot2)
 
 ggplot(data=df_oto1, aes(x=year, y=otoSr.ppm, fill=location))+
@@ -65,10 +111,8 @@ ggplot(data=df_oto1, aes(x=year, y=otoSr.ppm, fill=location))+
 
 ```
 
-
-
-### ANCOVA (oto Sr ~ age x location)
-```{r,}
+### ANCOVA of oto Sr ~ age*location)
+```{r, echo=FALSE}
 df_oto2 <- df_oto[,c("year","location","otoSr.ppm","age.d")]
 df_oto2$year <- as.factor(df_oto2$year)
 # Drop data have no age 
@@ -89,14 +133,20 @@ mod2 <- aov(otoSr.ppm ~ age.d + location, data=df_oto2);summary(mod2)
 anova(mod1,mod2)
 ```
 
+Note:
+
+- Interaction between age and location is significant (F = 14.9, P < 0.001) 
+
+- Intercepts between two rivers are also significantly different (F = 343.8, P < 0.001) 
 
 ### Two linear regressions
-```{r, fig.align='center', fig.width=9, fig.asp=0.5}
+```{r, echo=FALSE, fig.align='center', fig.width=9, fig.asp=0.5}
 library(ggplot2)
 
 ggplot(df_oto2, aes(x=age.d, y=otoSr.ppm, group=location, colour=location, shape=year))+
   geom_point(size=2)+
   geom_smooth(method = lm, se=F, fullrange=T)+
+  scale_colour_manual(values = c("dark grey","black"))+
   xlab("Age (d)")+ylab("Otolith [Sr](ppm)")+
   scale_y_continuous(breaks=seq(0, 2500, 500))+scale_x_continuous(breaks=seq(0, 24, 2))+
   theme_bw()+
