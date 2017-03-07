@@ -24,7 +24,9 @@ ggplot(dfn_water, aes(x=year, y=Sr.Ca, fill=site, width=0.85))+
   theme(panel.grid.major = element_blank(), panel.grid.minor=element_blank(),
         axis.title.x=element_text(size=16, colour = "black", margin = unit(c(5, 0, 0, 0), "mm")),
         axis.title.y=element_text(size=16, colour = "black", margin = unit(c(0, 5, 0, 0), "mm")),
-        axis.text=element_text(size=14, colour = "black"),legend.title=element_blank(), legend.position="none" )
+        axis.text=element_text(size=14, colour = "black"),legend.title=element_blank(), legend.position="none" )+
+  annotate("text", x=4:7-0.2, y=c(14,12,15,15), label=c("a","a","a","a"), size=6)+
+  annotate("text", x=4:7+0.2, y=c(26,22,35,31), label=c("bc","c","b","bc"), size=6)
 
 ```
 
