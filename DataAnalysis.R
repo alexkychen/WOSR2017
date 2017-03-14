@@ -116,7 +116,18 @@ ggplot(df_oto2, aes(x=age.d, y=otoSr.ppm, group=location, colour=location, shape
         axis.title.y=element_text(size=16, colour = "black", margin = unit(c(0, 5, 0, 0), "mm")),
         axis.text=element_text(size=14, colour = "black"),legend.title=element_blank() )
 
+# Linear regression for each river fish (otoSr ~ age.d)
+# For Sandusky River fish
+df_oto2_Sand <- subset(df_oto2, location=="Sandusky");summary(df_oto2_Sand)
+mod_Sand <- lm(data=df_oto2_Sand, otoSr.ppm ~ age.d); summary(mod_Sand)
+coef(mod_Sand)#get intercept and slope
+confint(mod_Sand)#get 95% CI of intercept and slope 
 
+# For Maumee River fish
+df_oto2_Maum <- subset(df_oto2, location=="Maumee");summary(df_oto2_Maum)
+mod_Maum <- lm(data=df_oto2_Maum, otoSr.ppm ~ age.d); summary(mod_Maum)
+coef(mod_Maum)
+confint(mod_Maum)
 
 ##Help function
 summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,

@@ -158,3 +158,35 @@ ggplot(df_oto2, aes(x=age.d, y=otoSr.ppm, group=location, colour=location, shape
         axis.text=element_text(size=14, colour = "black"),legend.title=element_blank() )
 ```
 
+### Linear regression analysis for each river fish
+
+Data summary for Sandusky River fish
+
+```{r,echo=FALSE}
+df_oto2_Sand <- subset(df_oto2, location=="Sandusky");summary(df_oto2_Sand)
+```
+
+Linear model summary and coefifcients and confifence interval (Sandusky River)
+
+```{r,}
+mod_Sand <- lm(data=df_oto2_Sand, otoSr.ppm ~ age.d); summary(mod_Sand)
+coef(mod_Sand)
+confint(mod_Sand)
+
+```
+
+Data summary for Maumee River fish
+
+```{r, echo=FALSE}
+df_oto2_Maum <- subset(df_oto2, location=="Maumee");summary(df_oto2_Maum)
+```
+
+Linear model summary and coefifcients and confifence interval (Maumee River)
+
+```{r,}
+mod_Maum <- lm(data=df_oto2_Maum, otoSr.ppm ~ age.d); summary(mod_Maum)
+coef(mod_Maum)
+confint(mod_Maum)
+
+```
+
